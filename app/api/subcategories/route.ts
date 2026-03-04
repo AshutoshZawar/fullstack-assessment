@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { productService } from '@/lib/products';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const category = searchParams.get('category') || undefined;
